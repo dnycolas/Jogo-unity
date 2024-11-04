@@ -3,9 +3,10 @@ using UnityEngine;
 public class exercicio03 : MonoBehaviour
 {
 
-    int vidaGanha;
 
     System.Random rand = new System.Random();
+
+    int vidaGanha;
 
     public int pocaovida = 0;
 

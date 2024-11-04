@@ -3,7 +3,7 @@ using UnityEngine;
 public class exercicio02 : MonoBehaviour
 {
 
-    int vidaPerdida;
+    int sorte;
 
     System.Random rand = new System.Random();
 
@@ -14,11 +14,11 @@ public class exercicio02 : MonoBehaviour
     {
         print("Você abriu um baú de power-up");
 
-       vidaPerdida = rand.Next(1, 6);
+         sorte = rand.Next(0, 100);
 
-        if (vidaPerdida > 3) 
+        if (sorte > 50) 
         {
-            print("você ganhou porão de velocidade, +speed");
+            print("você ganhou poção de velocidade, +speed");
         }
         else
         {
@@ -26,7 +26,7 @@ public class exercicio02 : MonoBehaviour
         }
 
 
-        print(vidaPerdida);
+        print(sorte);
 
     }
 
