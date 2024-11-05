@@ -1,8 +1,11 @@
 using System;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class exercicio08 : MonoBehaviour
 {
+
 
     /*
      (Contador de horas e dias) Crie um script que em que uma
@@ -13,27 +16,53 @@ public class exercicio08 : MonoBehaviour
     dentro da função-evento Update).
      */
 
+    public int dias;
+    float segundos;
+    public int horas;
 
+    [SerializeField] decimal decimalNumero;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        for (int cont = 1; cont <= 24; cont++)
-        {
-            print(cont);
-
-            if (cont == 24){ 
-                print("Ja se passou um dia inteiro");
-                }
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        decimalNumero = Mathf.RoundToInt(segundos += Time.deltaTime);
 
+        print(decimalNumero);
+
+
+
+        if (segundos > 10)
+        {
+
+            segundos = 0;
+
+            horas++;
+        }
+
+        if (horas >= 24)
+        {
+
+            dias++;
+
+
+        }
+
+        if (horas == 24)
+        {
+            horas = 0;
+        }
+
+        
+        
     }
 }
+

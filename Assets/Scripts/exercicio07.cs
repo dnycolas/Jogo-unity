@@ -19,6 +19,7 @@ public class exercicio07 : MonoBehaviour
 
     int danoJogador;
 
+    public int Faces_Dados;
 
     System.Random Força = new System.Random();
     int multiplicadorForca;

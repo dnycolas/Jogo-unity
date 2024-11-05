@@ -16,9 +16,9 @@ public class exercicio05 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pontos = desempenho.Next(0, 10);
+        pontos = desempenho.Next(0, 200);
 
-        if (pontos >= 6)
+        if (pontos >= 50)
         {
             print("parabéns"); 
         }
