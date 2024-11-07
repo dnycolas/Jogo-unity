@@ -10,15 +10,18 @@ public class exercicio11 : MonoBehaviour
     //  Use switch case para definir as respostas baseadas no estado do
     //  jogador.
 
-    string[] frases = { "OI!", "Legal! o meu é X", "Tchau" };
+    string[] frases = { "OI!", "Legal! o meu é X", "Tchau", "PQP!!!\n ta tudo bem ?" };
 
 
     public int num = 0;
 
+    public bool ferido = true;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-    
+
     }
 
     // Update is called once per frame
@@ -31,9 +34,13 @@ public class exercicio11 : MonoBehaviour
             {
 
                 case 1:
-                    if (num == 1)
+                    if (num == 1 && ferido == false)
                     {
                         print(frases[0]);
+                    }
+                    if (num == 1 && ferido == true)
+                    {
+                        print(frases[3]);
                     }
                     break;
                 case 2:
